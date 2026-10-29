@@ -1,11 +1,73 @@
-<div align="center">
+# Mictli · Asistente y Chatbot del Día de Muertos 🌼💀
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Aplicación web interactiva desarrollada con **React 19**, **TypeScript**, **Express** y la **API de Gemini**. Diseñada especialmente para estudiantes y público general interesado en explorar y aprender sobre las tradiciones, historia, ofrendas y cosmovisión del **Día de Muertos** en México.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🌟 Características
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+- **Enfoque Temático Exclusivo:** Responde con rigor histórico y cultural a cualquier duda sobre el Día de Muertos (Mictlán, elementos de la ofrenda, cempasúchil, pan de muerto, La Catrina, fechas del 27 de octubre al 2 de noviembre, tradiciones regionales como Xantolo o Janitzio, y patrimonio de la UNESCO).
+- **Atención Cordial y Educada:** Ante preguntas no relacionadas, declina amablemente invitando a conocer más de la festividad mexicana.
+- **Nivel Secundaria:** Lenguaje accesible, explicaciones estructuradas con viñetas y raíces nahuas claras.
+- **Streaming en Tiempo Real:** Respuestas fluidas con Server-Sent Events (SSE).
+- **Herramientas Útiles:** Lectura en voz alta (Text-to-Speech), botón para copiar respuestas y contador de preguntas realizadas.
 
-</div>
+---
+
+## 🛠️ Tecnologías
+
+- **Frontend:** React 19, TypeScript, Tailwind CSS, Lucide Icons, Marked.
+- **Backend:** Node.js, Express, TSX.
+- **Inteligencia Artificial:** `@google/genai` (Google Gemini 3.8 Flash con respaldo automático).
+- **Empaquetador:** Vite 6.
+
+---
+
+## 🚀 Instalación y Ejecución Local
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/TU_USUARIO/mictli-dia-de-muertos.git
+cd mictli-dia-de-muertos
+```
+
+### 2. Instalar dependencias
+```bash
+npm install
+```
+
+### 3. Configurar variables de entorno
+Copia el archivo de ejemplo y agrega tu clave gratuita de Google Gemini (puedes obtenerla gratis en [aistudio.google.com](https://aistudio.google.com)):
+```bash
+cp .env.example .env
+```
+Edita `.env`:
+```env
+GEMINI_API_KEY="AIzaSy..."
+PORT=3000
+```
+
+### 4. Iniciar el servidor de desarrollo
+```bash
+npm run dev
+```
+Abre tu navegador en `http://localhost:3000`.
+
+---
+
+## 🌐 Opciones de Despliegue Gratuito (Dura más de 1 mes)
+
+### Opción A: Render.com (Recomendado para full-stack Node.js + Express)
+1. Sube tu código a un repositorio en **GitHub**.
+2. Ve a [Render.com](https://render.com) y crea una cuenta gratuita.
+3. Elige **New +** > **Web Service**.
+4. Conecta tu repositorio de GitHub.
+5. Configura:
+   - **Build Command:** `npm install && npm run build`
+   - **Start Command:** `npm start`
+   - En **Environment Variables**, añade `GEMINI_API_KEY` con tu clave de Gemini.
+6. Haz clic en **Deploy**. Tendrás una URL permanente como:  
+   `https://mictli-dia-de-muertos.onrender.com`
+
+### Opción B: Vercel o Railway
+También puedes desplegarlo conectando tu repositorio de GitHub a Vercel o Railway en menos de 2 minutos.

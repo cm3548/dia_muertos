@@ -1,0 +1,8 @@
+{
+  "name": "Mictli - Asistente Escolar de Día de Muertos",
+  "description": "Chatbot educativo y respetuoso dedicado exclusivamente al Día de Muertos para estudiantes de secundaria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

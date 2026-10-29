@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0c0814;
+    color: #fef3c7;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Cinzel', serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-festive {
+    font-family: 'Pirata One', cursive;
+  }
+}
+
+/* Custom subtle animations for Day of the Dead theme */
+@keyframes candleFlicker {
+  0%, 100% {
+    opacity: 0.95;
+    transform: scale(1) translateY(0);
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.7));
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.97) translateY(1px);
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
+  }
+}
+
+.animate-candle {
+  animation: candleFlicker 2.8s ease-in-out infinite;
+}
+
+/* Papel Picado scalloped ribbon pattern */
+.papel-picado-border {
+  background-image: radial-gradient(circle at 10px 0, transparent 0, transparent 8px, #d91b5c 8.5px);
+  background-size: 20px 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #130d22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b285b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}

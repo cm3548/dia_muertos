@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mictli - Asistente Escolar de Día de Muertos</title>
+    <meta name="description" content="Chatbot educativo y respetuoso dedicado exclusivamente al Día de Muertos para estudiantes de secundaria." />
+    <meta property="og:title" content="Mictli - Asistente Escolar de Día de Muertos" />
+    <meta property="og:description" content="Chatbot educativo y respetuoso dedicado exclusivamente al Día de Muertos para estudiantes de secundaria." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // En AI Studio Cloud Run el WebSocket HMR está deshabilitado por diseño. Silenciar advertencia de conexión.
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e.reason && (e.reason.message?.includes('WebSocket') || String(e.reason).includes('WebSocket'))) {
+          e.preventDefault();
+        }
+      });
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pirata+One&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0c0814] text-amber-50 antialiased selection:bg-amber-500 selection:text-slate-950 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
