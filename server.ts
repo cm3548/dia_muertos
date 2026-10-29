@@ -138,11 +138,18 @@ app.post('/api/chat', async (req: Request, res: Response) => {
   }
 });
 
-// Montar Vite en desarrollo o estáticos en producción
+// Montar estáticos si dist existe, o Vite middleware si no se ejecutó el build
 async function startServer() {
-  const isProduction = process.env.NODE_ENV === 'production';
+  const fs = await import('fs');
+  const distIndexPath = path.resolve(__dirname, 'dist', 'index.html');
+  const hasDist = fs.existsSync(distIndexPath);
 
-  if (!isProduction) {
+  if (hasDist) {
+    app.use(express.static(path.resolve(__dirname, 'dist')));
+    app.get('*', (_req, res) => {
+      res.sendFile(distIndexPath);
+    });
+  } else {
     const { createServer } = await import('vite');
     const vite = await createServer({
       server: {
@@ -152,11 +159,6 @@ async function startServer() {
       appType: 'spa',
     });
     app.use(vite.middlewares);
-  } else {
-    app.use(express.static(path.resolve(__dirname, 'dist')));
-    app.get('*', (_req, res) => {
-      res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
-    });
   }
 
   app.listen(PORT, '0.0.0.0', () => {
