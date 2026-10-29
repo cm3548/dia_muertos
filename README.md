@@ -52,9 +52,3 @@ PORT=3000
 npm run dev
 ```
 Abre tu navegador en `http://localhost:3000`.
-
----
-
-
-### Opción B: Vercel o Railway
-También puedes desplegarlo conectando tu repositorio de GitHub a Vercel o Railway en menos de 2 minutos.
