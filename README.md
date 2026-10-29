@@ -2,7 +2,6 @@
 
 > **Demostración en vivo en la nube:**  
 > 🔗 [https://dia-muertos.onrender.com](https://dia-muertos.onrender.com)  
-> *(Servidor de respaldo: [Google Cloud Run Demo](https://ais-pre-6xe5h3kchzp7egwxcxevoy-897752684886.us-east1.run.app))*
 
 ---
 
