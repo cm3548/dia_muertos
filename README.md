@@ -55,19 +55,6 @@ Abre tu navegador en `http://localhost:3000`.
 
 ---
 
-## 🌐 Opciones de Despliegue Gratuito (Dura más de 1 mes)
-
-### Opción A: Render.com (Recomendado para full-stack Node.js + Express)
-1. Sube tu código a un repositorio en **GitHub**.
-2. Ve a [Render.com](https://render.com) y crea una cuenta gratuita.
-3. Elige **New +** > **Web Service**.
-4. Conecta tu repositorio de GitHub.
-5. Configura:
-   - **Build Command:** `npm install && npm run build`
-   - **Start Command:** `npm start`
-   - En **Environment Variables**, añade `GEMINI_API_KEY` con tu clave de Gemini.
-6. Haz clic en **Deploy**. Tendrás una URL permanente como:  
-   `https://mictli-dia-de-muertos.onrender.com`
 
 ### Opción B: Vercel o Railway
 También puedes desplegarlo conectando tu repositorio de GitHub a Vercel o Railway en menos de 2 minutos.
