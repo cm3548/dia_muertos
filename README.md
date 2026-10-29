@@ -78,22 +78,6 @@ Abre tu navegador web en:
 
 ---
 
-## 🧪 Casos de Prueba Recomendados para Evaluación
-
-Para probar la calidad y el cumplimiento de los requerimientos del chatbot:
-
-1. **Pregunta cultural:**  
-   * *"¿Por qué el pan de muerto tiene esa forma circular y cuatro canillas?"*
-2. **Pregunta histórica/prehispánica:**  
-   * *"¿Cuáles son los 9 niveles del Mictlán y qué perro ayudaba a cruzarlos?"*
-3. **Pregunta de calendario tradicional:**  
-   * *"¿Qué día llegan las almas de las mascotas y qué se les pone en la ofrenda?"*
-4. **Prueba de filtro (pregunta fuera de tema):**  
-   * *"¿Cómo resuelvo una ecuación cuadrática?"* o *"¿Quién ganó el partido de fútbol?"*  
-   * *Resultado esperado:* El bot responderá con gran cordialidad y educación recordando que su enfoque es exclusivamente el Día de Muertos.
-
----
-
 ## 📦 Estructura del Código
 
 ```text
